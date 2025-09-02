@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "index.html",
+      "src": {"index.html", "daisukie.css", "daisukie.js"},
       "use": "@vercel/static"
     }
   ],
