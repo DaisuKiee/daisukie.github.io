@@ -321,7 +321,7 @@ let loadingProgress = 0;
                 };
                 
                 try {
-                    const response = await fetch('https://daisukiedev-ibndgbegq-elixirdevelopmentbotgmailcoms-projects.vercel.app/send-email', {
+                    const response = await fetch('https://daisukiedev-git-main-elixirdevelopmentbotgmailcoms-projects.vercel.app/send-email', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -404,4 +404,5 @@ let loadingProgress = 0;
             }
         `;
         document.head.appendChild(style);
+
 
