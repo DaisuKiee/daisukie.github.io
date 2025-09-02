@@ -1,5 +1,5 @@
 {
-  "name": "caisukie-dev-portfolio",
+  "name": "daisukie-dev-portfolio",
   "version": "1.0.0",
   "description": "Portfolio website with contact form and backend email service",
   "main": "server.js",
@@ -12,7 +12,7 @@
   "homepage": "https://github.com/DaisuKiee",
   "repository": {
     "type": "git",
-    "url": ""https://github.com/DaisuKiee"
+    "url": "https://github.com/DaisuKiee"
   },
   "author": "daisukie dev",
   "license": "MIT",
