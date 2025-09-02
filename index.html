@@ -3,166 +3,448 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Open Graph / Facebook / Discord -->
-<meta property="og:type" content="website">
+
+    <meta property="og:type" content="website">
 <meta property="og:url" content="https://daisukie.is-a.dev/">
-<meta property="og:title" content="Welcome to My Codeverse">
-<meta property="og:description" content="Builder of Cool Stuff & Breaker of Limits. See the magic in action.">
+<meta property="og:title" content="DaisuKie Dev">
+<meta property="og:description" content="DaisuKie Dev - Portfolio of a Web Developer specializing in modern web applications and interactive experiences.">
 <meta property="og:image" content="daisukie.png">
 
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://daisukie.is-a.dev/">
 <meta property="twitter:title" content="Welcome to My Codeverse">
 <meta property="twitter:description" content="Builder of Cool Stuff & Breaker of Limits. See the magic in action.">
 <meta property="twitter:image" content="daisukie.png">
 
-    <title>DaisuKie. - Portfolio</title>
+    <title>DaisuKie Dev - Web Developer</title>
     <link rel="stylesheet" href="daisukie.css">
     <link rel="shortcut icon" href="daisukie.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <!-- Preloader -->
     <div class="preloader" id="preloader">
-        <div class="preloader-logo">D</div>
-        <div class="loading-counter" id="loadingCounter">0%</div>
-        <div class="loading-text">LOADING...</div>
+        <div class="preloader-content">
+            <div class="loading-animation">
+                <div class="code-circle"></div>
+                <div class="code-circle"></div>
+                <div class="code-circle"></div>
+            </div>
+            <div class="loading-text">Loading portfolio</div>
+            <div class="loading-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
     </div>
 
-    <div class="main-wrapper" id="mainWrapper">
-        <header class="header">
-            <nav class="nav">
-                <a href="#" class="logo">&lt;/&gt; DaisuKie.</a>
-                <ul class="nav-links">
-                    <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="#blog"><i class="fa-solid fa-blog"></i> Blog</a></li>
-                    <li><a href="#about"><i class="fa-solid fa-address-card"></i> About</a></li>
-                    <li><a href="#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
-                    <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <div class="canvas-container">
+        <canvas id="threejs-canvas"></canvas>
+    </div>
 
-        <!-- Home Section -->
-        <section class="home-section" id="home">
-            <div class="floating-shapes">
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>
-            </div>
-            <div class="home-content">
-                <h1 class="hero-title">Welcome to My Codeverse</h1>
-                <p class="hero-subtitle">Builder of Cool Stuff & Breaker of Limits</p>
-                <p class="hero-description">
-                    Turning coffee into code and pixels into magic. From quirky concepts to jaw-dropping deployments,
-                     I bring ideas to life, one line of code at a time.
-                     Expect innovation, a sprinkle of chaos, and digital awesomeness that actually works.
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav-dot active" data-section="0" title="Home"></a>
+        <a href="#about" class="nav-dot" data-section="1" title="About"></a>
+        <a href="#projects" class="nav-dot" data-section="2" title="Projects"></a>
+        <a href="#contact" class="nav-dot" data-section="3" title="Contact"></a>
+    </nav>
+
+    <div class="content" id="content">
+        <section class="section hero" id="hero">
+            <div class="code-bg"></div>
+            <div>
+                <h1>DaisuKie Dev</h1>
+                <p class="subtitle">Web_developer.execute()</p>
+                <p class="description">
+                    Creating powerful applications and interactive experiences with modern technologies. 
+                    Dedicated to building reliable systems, responsive designs, and user-focused solutions.
                 </p>
-                <div class="cta-buttons">
-                    <a href="#about" class="cta-btn primary">🚀 Show Me the Magic</a>
-                    <a href="https://github.com/DaisuKiee" class="cta-btn secondary"><i class="fa-brands fa-github"></i> Github</a>
+                <a href="#projects" class="cta-button">
+                    <span>View Projects</span>
+                    <span>→</span>
+                </a>
+                <div class="scroll-indicator">
+                    <div>scroll_down()</div>
                 </div>
-            </div>
-            <div class="scroll-indicator" onclick="scrollToSection('#blog')">
-                ↓
             </div>
         </section>
 
-        <main class="main-content container">
-        <section class="blog-section" id="blog">
-            <div class="blog-header">
-                <h1 class="blog-title">Blogs</h1>
-                <button class="subscribe-btn"><i class="fa-brands fa-discord"></i> daisukie_.</button>
-            </div>
-            <p style="margin-bottom: 2rem; color: #888;">Stay thoughtful on technology, and Discover to reinforce ideas.</p>
-
-            <article class="blog-post">
-                <div class="blog-image"></div>
-                <div class="blog-content">
-                    <h3>What does it take to become a Discord bot developer?</h3>
-                    <p>My journey as a Discord bot developer kicked off in 2019, sparked by a curiosity to automate tasks in my favorite servers. Starting with basic JavaScript and the Discord.js library, I built my first bot to play music and moderate chats. Over time, I honed my skills by adding features like custom commands, role management, and ticket systems, learning through trial, error, and online communities.</p>
-                    <div class="blog-meta">Discord Bot Developer • Nov 15, 2019</div>
-                </div>
-            </article>
-
-            <article class="blog-post">
-                <div class="blog-image"></div>
-                <div class="blog-content">
-                    <h3>What does it take to become a Discord bot developer?</h3>
-                    <p>As I progressed, I expanded my bot’s capabilities with custom commands and moderation tools. By 2021, I was integrating web APIs and managing databases, adapting to Discord’s evolving API. This hands-on experience deepened my skills, keeping me engaged even as I explored other tech paths.</p>
-                    <div class="blog-meta">Discord Bot Developer •  2022</div>
-                </div>
-            </article>
-
-            <article class="blog-post">
-                <div class="blog-image"></div>
-                <div class="blog-content">
-                    <h3>What does it take to become a Discord bot developer?</h3>
-                    <p>Today, I’m still a Discord bot developer, now mastering sharding for large servers and experimenting with new features. Since 2019, my journey has been one of continuous learning, blending early lessons with modern techniques to create bots that enhance server life as of July 2025.</p>
-                    <div class="blog-meta">Discord Bot Developer • 2025</div>
-                </div>
-            </article>
-        </section>
-
-        <section class="developer-section" id="about">
-            <div class="developer-card">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Developer</h2>
-                <div class="profile-image"><img src="daisukie.png" alt="" width="70" height="100"></div>
-                <h3>Hey,<br>I am Romeo<br>Known as DaisuKie</h3>
-                <p style="margin: 1rem 0; color: #888;">Experienced developer passionate about creating amazing web/discord bot experiences</p>
-                <a href="https://facebook.com/calnboss"><button class="subscribe-btn" style="margin-top: 1rem;"><i class="fa-solid fa-message"></i> Let's Talk →</button></a>
-            </div>
-
-            <div class="about-section">
-                <h3 style="color: #00d4aa; margin-bottom: 1rem;">About Me</h3>
-                <p style="line-height: 1.6; color: #ccc;">
-                    Web development and backend development are closely of tasks that go somewhere towards a building website for the internet or an intranet. Web development can range from developing a simple single static web page to complex web applications and social networks.
+        <section class="section about" id="about">
+            <div class="code-bg"></div>
+            <div class="about-content">
+                <h2>About</h2>
+                <p>
+                    I'm a developer passionate about building responsive web platforms and multi-functional Discord bots. 
+                    With 3+ years of experience, I specialize in modern frameworks, 
+                    backend optimization, and creating interactive user experiences.
                 </p>
-                <div class="code-icon">&lt;/&gt;</div>
-            </div>
-
-            <div class="skills-section" id="skills">
-                <h3 style="color: #00d4aa; margin-bottom: 1rem; text-align: center;">Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-item"><i class="fa-brands fa-js" style="color: yellow;"></i> JavaScript</div>
-                    <div class="skill-item"><i class="fa-brands fa-html5" style="color: orange;"></i> HTML</div>
-                    <div class="skill-item"><i class="fa-brands fa-css3" style="color: blue;"></i> CSS</div>
-                    <div class="skill-item"><i class="fa-brands fa-node-js" style="color: green;"></i> NODE JS</div>
-                    <div class="skill-item"><i class="fa-brands fa-react" style="color: skyblue;"></i> React JS</div>
-                </div>
-
-                <div class="tech-icons">
-                    <div class="tech-icon">C</div>
-                    <div class="tech-icon">O</div>
-                    <div class="tech-icon">D</div>
-                    <div class="tech-icon">E</div>
+                <p>
+                    Beyond development, I enjoy experimenting with new technologies such as AI-driven tools,
+                    3D rendering with WebGL, and scalable cloud architectures.
+                </p>
+                <div class="skills">
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">TypeScript</div>
+                    <div class="skill">React</div>
+                    <div class="skill">Node.js</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">MongoDB</div>
+                    <div class="skill">MySQL</div>
+                    <div class="skill">Docker</div>
                 </div>
             </div>
         </section>
 
-        <section class="article-section">
-            <div class="article-content">
-                <div>
-                    <h2 style="color: #00d4aa; font-size: 2rem; margin-bottom: 1rem;">What does it take to become a web developer?</h2>
-                    <div style="color: #888; margin-bottom: 1rem;">Web Dev • January 15, 2020</div>
-                    <p style="line-height: 1.6; color: #ccc; margin-bottom: 2rem;">
-                        My journey as a web developer began back in 2020, sparked by a chance encounter on Discord. I connected with a group of developer friends who took me under their wing, eager to teach me the ropes. From the basics of HTML and CSS to the intricacies of JavaScript, they guided me through hands-on coding sessions and shared their real-world experiences. This mentorship laid a strong foundation, igniting my passion for building websites.
-                    </p>
-                    <p style="line-height: 1.6; color: #ccc;">
-                        As I progressed, I delved into backend development, learning server-side languages like Python and databases like MySQL with their encouragement. The field’s rapid evolution kept me on my toes, and my friends introduced me to modern frameworks and best practices. Through continuous learning, late-night debugging, and countless projects, I honed my skills. Today, I stay current with industry trends and security practices, all thanks to that pivotal Discord community that started it all.
-                    </p>
+        <section class="section projects" id="projects">
+            <div class="code-bg"></div>
+            <div class="projects-content">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"></div>
+                            <div class="project-icon"></div>
+                            <div class="project-icon"></div>
+                        </div>
+                        <h3>Discord Bot</h3>
+                        <p>A feature-rich Discord bot designed for community management, music playback, and interactive events. It supports giveaways, queue systems, sticky messages, and advanced moderation tools to keep servers organized and engaging.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Discord.js</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-primary" onclick="openModal('project1')">View Details</button>
+                            <a href="https://discord.gg/filipino" class="btn btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"></div>
+                            <div class="project-icon"></div>
+                            <div class="project-icon"></div>
+                        </div>
+                        <h3>Car Guy Auto Pro</h3>
+                        <p>A responsive website for booking auto service appointments online. Customers can schedule appointments directly, and all requests are sent via email for easy management.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-primary" onclick="openModal('project2')">View Details</button>
+                            <a href="#" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+<!--
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"></div>
+                            <div class="project-icon"></div>
+                            <div class="project-icon"></div>
+                        </div>
+                        <h3>3D Portfolio Engine</h3>
+                        <p>Open-source 3D portfolio framework with customizable themes and particle systems built with Three.js.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Three.js</span>
+                            <span class="tech-tag">WebGL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">GLSL</span>
+                            <span class="tech-tag">Webpack</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-primary" onclick="openModal('project3')">View Details</button>
+                            <a href="#" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                     -->
                 </div>
-                <div class="article-image"></div>
             </div>
-            <br>
-            <div class="cta-buttons">
-                    <a href="https://facebook.com/calnboss" class="cta-btn primary">🚀 Hire me</a>
-                </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="code-bg"></div>
+            <div class="contact-content">
+                <h2>Contact</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+                    <div class="confirmation-message" id="confirmationMessage"></div>
+                </form>
+            </div>
         </section>
     </div>
 
-  <script src="daisukie.js"></script>
+    <div id="project1Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal('project1')">&times;</button>
+                <h2 class="modal-title">Discord Bot</h2>
+                <p class="modal-subtitle">Full-Stack Online Shopping Solution</p>
+            </div>
+            <div class="modal-body">
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Update</div>
+                        <div class="meta-value">1 Week Update</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Users</div>
+                        <div class="meta-value">50,000+</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Performance</div>
+                        <div class="meta-value">99.9% Uptime</div>
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Project Overview</h4>
+                        <p>A multi-purpose Discord bot built for community engagement and server automation. It features powerful moderation tools, sticky messages, music playback with Lavalink, event queue management, and an advanced giveaway system. Designed to improve user interaction while keeping communities safe and fun.</div>
+
+                    <div class="detail-section">
+                        <h4>✨ Key Features</h4>
+                        <ul>
+                            <li>Queue system with voice/text channel support</li>
+                            <li>Music playback (YouTube, Spotify, SoundCloud)</li>
+                            <li>Advanced giveaway management with tracking</li>
+                            <li>Sticky messages and auto-resend on spam</li>
+                            <li>Customizable welcome system with embeds & images</li>
+                            <li>Moderation tools (nickname approval, locking channels, etc.)</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>⚡ Technical Implementation</h4>
+                        <p>Developed using Node.js and Discord.js v14, with MongoDB for persistence. Lavalink is integrated via erela.js/Kazagumo for music handling. The bot uses a modular command/event handler and supports CI/CD for quick updates.
+                        <div class="code-block">
+// Example: Queue join logic
+client.on("interactionCreate", async (interaction) => {
+  if (interaction.commandName === "joinqueue") {
+    const queue = await queueHandler.add(interaction.user.id);
+    return interaction.reply(`${interaction.user} joined the queue!`);
+  }
+});
+
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>📊 Performance & Metrics</h4>
+                        <ul>
+                            <li>Handles 5,000+ commands daily</li>
+                            <li>99.9% uptime with auto-restart and error handling</li>
+                            <li>Supports 500+ servers without performance loss</li>
+                            <li>Positive community feedback: ⭐ 4.8/5 average rating</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>🔒 Security & Compliance</h4>
+                        <p>Implements industry-standard security practices including PCI DSS compliance, data encryption at rest and in transit, rate limiting, and comprehensive audit logging. Regular security audits and penetration testing ensure ongoing protection.</p>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://discord.gg.filipino" class="btn btn-primary">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project2Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal('project2')">&times;</button>
+                <h2 class="modal-title">Car Guy Auto Pro Modal</h2>
+                <p class="modal-subtitle">Machine Learning Cryptocurrency Trading System</p>
+            </div>
+            <div class="modal-body">
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Duration</div>
+                        <div class="meta-value">1 month</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Users</div>
+                        <div class="meta-value">2000+
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Bookings</div>
+                        <div class="meta-value">1,000+ appointments</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Performance</div>
+                        <div class="meta-value">Responsive & Reliable</div>
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Project Overview</h4>
+                        <p>Car Guy Auto Pro is a modern, responsive web application that allows customers to book auto service appointments online. All bookings are received directly through email notifications, making management simple and efficient.</div>
+
+                    <div class="detail-section">
+                        <h4>✨ Key Features:</h4>
+                        <ul>
+                            <li>Appointment booking form with validation</li>
+                            <li>Email notifications for every booking request</li>
+                            <li>Fully responsive UI for mobile and desktop</li>
+                            <li>Clean, intuitive design for easy navigation</li>
+                            <li>Secure backend with spam protection</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>⚡ Technical Architecture</h4>
+                        <p>Built using HTML5, CSS3, JavaScript with Node.js + Express for backend. Emails handled with Nodemailer integration. Fully responsive design powered by Bootstrap/Tailwind for cross-device compatibility.
+                        <div class="code-block">
+// Example: Appointment booking email
+app.post("/book", (req, res) => {
+  const { name, date, service } = req.body;
+  transporter.sendMail({
+    to: "carguyautopro@gmail.com",
+    subject: "New Appointment Request",
+    text: `Booking from ${name} for ${service} on ${date}`,
+  });
+  res.send("Appointment booked successfully!");
+});
+
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>📊 Performance Metrics</h4>
+                        <ul>
+                            <li>Processes 100+ bookings per week</li>
+                            <li>Average response time: < 1.5s</li>
+                            <li>Works across all devices with 100% responsive design</li>
+                            <li>Customer satisfaction: ⭐ 4.9/5</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>🔒 Security & Risk Management</h4>
+                        <p>Implements multiple layers of security including API key encryption, position size limits, stop-loss mechanisms, and real-time monitoring. The system automatically halts trading during high volatility periods and includes emergency shutdown procedures.</p>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/DaisuKiee" class="btn btn-primary">GitHub Repository(not yet publish in  github)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project3Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal('project3')">&times;</button>
+                <h2 class="modal-title">3D Portfolio Engine</h2>
+                <p class="modal-subtitle">Interactive WebGL Portfolio Framework</p>
+            </div>
+            <div class="modal-body">
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Duration</div>
+                        <div class="meta-value">4 months</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Downloads</div>
+                        <div class="meta-value">1,200+</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">GitHub Stars</div>
+                        <div class="meta-value">340</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Performance</div>
+                        <div class="meta-value">60 FPS</div>
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Project Overview</h4>
+                        <p>A comprehensive 3D portfolio framework that allows developers and designers to create stunning interactive portfolios with minimal code. Features customizable themes, particle systems, 3D models, and smooth scroll-based animations.</p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>✨ Key Features</h4>
+                        <ul>
+                            <li>Drag-and-drop 3D scene builder</li>
+                            <li>20+ pre-built particle systems and effects</li>
+                            <li>Responsive design with mobile optimization</li>
+                            <li>Custom shader support for advanced visuals</li>
+                            <li>Performance monitoring and optimization tools</li>
+                            <li>Plugin architecture for extensibility</li>
+                            <li>SEO-friendly with server-side rendering support</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>🔧 Technical Implementation</h4>
+                        <p>Built with Three.js and modern JavaScript, featuring a modular architecture that allows for easy customization and extension. The engine uses WebGL for hardware-accelerated graphics and includes performance optimizations for mobile devices.</p>
+                        
+                        <div class="code-block">
+// 3D Scene configuration
+const portfolioEngine = new PortfolioEngine({
+  container: '#app',
+  theme: 'cyberpunk',
+  particles: {
+    count: 1000,
+    animation: 'float'
+  },
+  camera: {
+    fov: 75,
+    animation: 'smooth'
+  }
+});
+
+portfolioEngine.init();
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>🎨 Customization Options</h4>
+                        <ul>
+                            <li>10+ built-in themes (cyberpunk, minimal, neon, etc.)</li>
+                            <li>Custom color schemes and gradients</li>
+                            <li>Configurable particle systems</li>
+                            <li>Multiple camera movement patterns</li>
+                            <li>Custom 3D model integration</li>
+                            <li>Animation timing and easing controls</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>📈 Community Impact</h4>
+                        <p>Open-sourced on GitHub with over 340 stars and 1,200+ downloads. Used by freelancers, agencies, and creative professionals worldwide. Featured in web development newsletters and showcased at design conferences.</p>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="btn btn-primary">Live Demo</a>
+                    <a href="#" class="btn btn-secondary">GitHub Repository</a>
+                    <a href="#" class="btn btn-secondary">Documentation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script src="daisukie.js"></script>
 </body>
 </html>
