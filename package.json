@@ -1,0 +1,28 @@
+{
+  "name": "caisukie-dev-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website with contact form and backend email service",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "predeploy": "echo 'No build step needed for static site'",
+    "deploy": "gh-pages -d ."
+  },
+  "homepage": "https://github.com/DaisuKiee",
+  "repository": {
+    "type": "git",
+    "url": ""https://github.com/DaisuKiee"
+  },
+  "author": "daisukie dev",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.9.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "nodemon": "^2.0.22"
+  }
+}
