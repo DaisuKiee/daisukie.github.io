@@ -321,7 +321,7 @@ let loadingProgress = 0;
                 };
                 
                 try {
-                    const response = await fetch('https://daisukie.vercel.app/send-email', {
+                    const response = await fetch('http://fi10.bot-hosting.net:20083/send-email', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -404,6 +404,7 @@ let loadingProgress = 0;
             }
         `;
         document.head.appendChild(style);
+
 
 
 
