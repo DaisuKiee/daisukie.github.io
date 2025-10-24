@@ -1,28 +1,24 @@
 {
-  "name": "daisukie-dev-portfolio",
+  "name": "daanbantayan-backend",
   "version": "1.0.0",
-  "description": "Portfolio website with contact form and backend email service",
+  "description": "Backend for Daanbantayan Paradise Booking Platform",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "predeploy": "echo 'No build step needed for static site'",
-    "deploy": "gh-pages -d ."
+    "dev": "nodemon server.js"
   },
-  "homepage": "https://github.com/DaisuKiee",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DaisuKiee"
-  },
-  "author": "daisukie dev",
-  "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
-    "nodemailer": "^6.9.0",
-    "cors": "^2.8.5"
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "multer": "^2.0.2",
+    "nodemailer": "^6.10.1",
+    "twilio": "^4.19.0"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.0.1"
   }
 }
