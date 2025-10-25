@@ -237,7 +237,7 @@ contactForm.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('https://daisukie-github-io.vercel.app/send-email', {
+        const response = await fetch('https://daisukiedev.vercel.app/send-email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
@@ -335,3 +335,4 @@ setInterval(() => {
     }
 
 }, 500);
+
