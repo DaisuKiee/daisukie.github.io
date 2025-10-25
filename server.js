@@ -184,12 +184,17 @@ app.post('/send-email', (req, res) => {
 });
 
 // Serve Frontend (index.html) as root
-app.get('/', (req, res) => {
+app.get('/daisu', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Start Server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
     console.log(`Frontend served from 'public' folder. API at /send-email.`);
+
 });
