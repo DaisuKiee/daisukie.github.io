@@ -267,7 +267,7 @@ contactForm.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/send-email', {
+        const response = await fetch('https://daisukie.is-a.dev/send-email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
@@ -363,4 +363,5 @@ setInterval(() => {
     } else {
         devtools.open = false;
     }
+
 }, 500);
