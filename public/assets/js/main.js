@@ -133,6 +133,8 @@ viewProjectBtns.forEach(btn => {
         const tech = item.dataset.tech.split(', ');
         const demo = item.dataset.demo;
         const git = item.dataset.git;
+        const support = item.dataset.support;
+        const view = item.dataset.view;
 
         document.getElementById('modalTitle').textContent = title;
         document.getElementById('modalDescription').textContent = description;
@@ -152,8 +154,36 @@ viewProjectBtns.forEach(btn => {
             techList.appendChild(li);
         });
 
-        document.getElementById('modalDemo').href = demo;
-        document.getElementById('modalGit').href = git;
+        // Hide all buttons initially
+        document.getElementById('modalDemo').style.display = 'none';
+        document.getElementById('modalGit').style.display = 'none';
+        document.getElementById('modalSupport').style.display = 'none';
+        document.getElementById('modalView').style.display = 'none';
+
+        // Show and set only relevant buttons with valid hrefs
+        if (demo && demo !== '#') {
+            const btnElem = document.getElementById('modalDemo');
+            btnElem.href = demo;
+            btnElem.style.display = 'inline-block';
+        }
+        if (git && git !== '#') {
+            const btnElem = document.getElementById('modalGit');
+            btnElem.href = git;
+            btnElem.style.display = 'inline-block';
+        }
+        if (support && support !== '#') {
+            const btnElem = document.getElementById('modalSupport');
+            btnElem.href = support;
+            btnElem.style.display = 'inline-block';
+            // Optional: If you want to keep the HTML label but confirm it's correct
+            // btnElem.textContent = 'Join Support Server'; // Already set in HTML
+        }
+        if (view && view !== '#') {
+            const btnElem = document.getElementById('modalView');
+            btnElem.href = view;
+            btnElem.style.display = 'inline-block';
+            // Optional: btnElem.textContent = 'View on top.gg'; // Already set in HTML
+        }
 
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden'; // Prevent background scroll
@@ -237,7 +267,7 @@ contactForm.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('https://daisukiedev.vercel.app/send-email', {
+        const response = await fetch('http://localhost:3000/send-email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
@@ -333,6 +363,4 @@ setInterval(() => {
     } else {
         devtools.open = false;
     }
-
 }, 500);
-

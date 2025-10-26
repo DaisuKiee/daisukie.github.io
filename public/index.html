@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="assets/img/daisu.png" type="image/x-icon">
 </head>
 <body>
-    <!-- Example: Load in hidden iframe -->
 
     <!-- Preloader -->
     <div class="preloader" id="preloader">
@@ -36,26 +35,28 @@
     <div class="particles" id="particles"></div>
 
     <!-- Portfolio Modal -->
-    <div class="modal" id="portfolioModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-header">
-                <h2 id="modalTitle"></h2>
+<div class="modal" id="portfolioModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+        </div>
+        <div class="modal-body">
+            <img id="modalImage" src="" alt="Project Image" style="display: none;">
+            <p id="modalDescription"></p>
+            <div class="modal-tech">
+                <h4>Technologies Used:</h4>
+                <ul id="modalTech"></ul>
             </div>
-            <div class="modal-body">
-                <img id="modalImage" src="" alt="Project Image" style="display: none;">
-                <p id="modalDescription"></p>
-                <div class="modal-tech">
-                    <h4>Technologies Used:</h4>
-                    <ul id="modalTech"></ul>
-                </div>
-                <div class="modal-links">
-                    <a id="modalDemo" href="#" target="_blank" class="btn btn-primary">Live Demo</a>
-                    <a id="modalGit" href="#" target="_blank" class="btn btn-secondary">GitHub</a>
-                </div>
+            <div class="modal-links">
+                <a id="modalDemo" href="#" target="_blank" class="btn btn-primary" style="display: none;">Live Demo</a>
+                <a id="modalGit" href="#" target="_blank" class="btn btn-secondary" style="display: none;">GitHub</a>
+                <a id="modalSupport" href="#" target="_blank" class="btn btn-primary" style="display: none;">Support Server</a>
+                <a id="modalView" href="#" target="_blank" class="btn btn-secondary" style="display: none;">top.gg</a>
             </div>
         </div>
     </div>
+</div>
 
     <nav id="navbar">
         <div class="logo">Daisukie Dev</div>
@@ -69,7 +70,7 @@
         </ul>
         <a href="#" class="download-btn">
             <span>📄</span>
-            Download CV (not yet finish)
+            Download CV(not yet finish)
         </a>
         <button class="mobile-menu-btn">☰</button>
     </nav>
@@ -264,7 +265,7 @@
                      data-title="Tourist Online Booking With email Notification" 
                      data-description="A full-stack web application for booking tourist services with email notifications using Nodemailer." 
                      data-image="assets/img/db.png" 
-                     data-tech="Nodemaile, Node.js, Express, MongoDB" 
+                     data-tech="Nodemailer, Node.js, Express, MongoDB" 
                      data-demo="https://dbtourist.vercel.app/" 
                      data-git="https://github.com/DaisuKiee/Final-Project">
                     <img src="assets/img/db.png" alt="Tourist Guide Website" class="portfolio-image">
@@ -278,7 +279,7 @@
                      data-title="PhilQueake Monitoring App" 
                      data-description="Earthquake monitoring application providing real-time updates and alerts for seismic activities." 
                      data-image="assets/img/philquake.png" 
-                     data-tech="Vue.js, Socket.io, Firebase" 
+                     data-tech="React, Node.js, Express, MongoDB" 
                      data-demo="https://philquake.vercel.app/" 
                      data-git="https://github.com/DaisuKiee/PhilQuake">
                     <img src="assets/img/philquake.png" alt="PhilQuake" class="portfolio-image">
@@ -292,9 +293,9 @@
                      data-title="Elixir Discord Bot" 
                      data-description="A multifunctional Discord bot built with Elixir, featuring moderation, music playback, and custom commands." 
                      data-image="assets/img/Elixir.png" 
-                     data-tech="HTML, CSS, JavaScript" 
-                     data-demo="https://demo3.com" 
-                     data-git="https://github.com/user/portfolio">
+                     data-tech="MongoDB, Node.js, Discord.js" 
+                     data-support="https://discord.gg/ggJt5aXW" 
+                     data-view="https://top.gg/bot/732916004656513077">
                     <img src="assets/img/Elixir.png" alt="Portfolio Website" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <h3>Elixir</h3>
@@ -372,5 +373,4 @@
 
     <script src="assets/js/main.js"></script>
 </body>
-
 </html>
