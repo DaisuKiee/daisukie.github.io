@@ -1,0 +1,68 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Tourist Online Booking With email Notification",
+      "description": "A full-stack web application for booking tourist services with email notifications using Nodemailer.",
+      "image": "assets/img/db.png",
+      "technologies": ["Nodemailer", "Node.js", "Express", "MongoDB"],
+      "links": {
+        "demo": "https://dbtourist.vercel.app/",
+        "github": "https://github.com/DaisuKiee/Final-Project"
+      }
+    },
+    {
+      "id": 2,
+      "title": "PhilQueake Monitoring App",
+      "description": "Earthquake monitoring application providing real-time updates and alerts for seismic activities.",
+      "image": "assets/img/philquake.png",
+      "technologies": ["React", "Node.js", "Express", "MongoDB"],
+      "links": {
+        "demo": "https://philquake.vercel.app/",
+        "github": "https://github.com/DaisuKiee/PhilQuake"
+      }
+    },
+    {
+      "id": 3,
+      "title": "/Filipino Discord Server",
+      "description": "A vibrant Filipino community on Discord where members can connect, socialize, and engage with fellow Filipinos and friends. A welcoming space for meaningful conversations and genuine connections.",
+      "image": "assets/img/filipino.png",
+      "technologies": ["Discord Community", "Social Platform", "Community Management"],
+      "links": {
+        "demo": "https://filipino.gg/",
+        "support": "https://discord.gg/filipino"
+      }
+    },
+    {
+      "id": 4,
+      "title": "The Vocals - Discord Music Bots",
+      "description": "Your ultimate music companion for Discord featuring VocalVibes (karaoke bot) and VibeTunes (music bot). Experience high-quality audio streaming with crystal clear sound, 99.9% uptime, and support for YouTube, Spotify, SoundCloud & more.",
+      "image": "assets/img/vocalandvibe.png",
+      "technologies": ["Discord.js", "Audio Streaming", "Multi-Platform", "Node.js"],
+      "links": {
+        "demo": "https://thevocals.org/",
+        "support": "https://discord.gg/thevocals"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Elixir Discord Bot",
+      "description": "A powerful gamification bot for Discord featuring quests, seasons, achievements, and role rewards. Level up your Discord server with engaging daily quests and XP progression system.",
+      "image": "assets/img/elixirs.png",
+      "technologies": ["Discord.js", "Gamification", "XP System", "MongoDB"],
+      "links": {
+        "support": "https://discord.gg/elixir"
+      }
+    },
+    {
+      "id": 6,
+      "title": "UniBuddy - Campus Connection Platform",
+      "description": "Connect with students across the Philippines. Meet and chat with fellow students from universities across Luzon, Visayas, and Mindanao. Anonymous or open your choice. A social platform for university students to network and communicate.",
+      "image": "assets/img/uniii.png",
+      "technologies": ["React", "Next.js", "Real-time Chat", "Social Platform"],
+      "links": {
+        "demo": "https://unibuddy-two.vercel.app/"
+      }
+    }
+  ]
+}

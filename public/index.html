@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daisukie's Portfolio</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://trusted-cdn.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com;">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="assets/img/daisu.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">Code With Daisukie</div>
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <div class="animated-bg">
+        <div class="glow-orb orb1"></div>
+        <div class="glow-orb orb2"></div>
+        <div class="glow-orb orb3"></div>
+    </div>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Portfolio Modal -->
+<div class="modal" id="portfolioModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+        </div>
+        <div class="modal-body">
+            <img id="modalImage" src="" alt="Project Image" style="display: none;">
+            <p id="modalDescription"></p>
+            <div class="modal-tech">
+                <h4>Technologies Used:</h4>
+                <ul id="modalTech"></ul>
+            </div>
+            <div class="modal-links">
+                <a id="modalDemo" href="#" target="_blank" class="btn btn-primary">Live Demo</a>
+                <a id="modalGit" href="#" target="_blank" class="btn btn-secondary">GitHub</a>
+                <a id="modalSupport" href="#" target="_blank" class="btn btn-primary">Support Server</a>
+                <a id="modalView" href="#" target="_blank" class="btn btn-secondary">top.gg</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <nav id="navbar">
+        <div class="logo">Daisukie Dev</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#" class="download-btn">
+            <i class="fas fa-file-download"></i>
+            Download CV(not yet finish)
+        </a>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero" id="home">
+            <div class="hero-image">
+                <div class="glow-ring"></div>
+                <div class="image-wrapper">
+                    <img src="assets/img/daisu.png" alt="Profile">
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="greeting">Hello, I'm</div>
+                <h1 class="name">Romeo AKA Daisukie</h1>
+                <div class="role">And I'm a <span>Full-Stack Developer</span></div>
+                <p class="description">
+                    I specialize in creating dynamic and beautiful web applications. With a passion for coding and a knack for problem-solving, I bring ideas to life in the digital world.
+                </p>
+
+                <div class="social-links">
+                    <a href="https://facebook.com/calnboss"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/DaisuKiee"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/daisukiei/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vincent-romeo-11abba383/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Hire Me</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item reveal-scale stagger-delay-1">
+                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-item reveal-scale stagger-delay-2">
+                <div class="stat-number" data-target="33">0</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item reveal-scale stagger-delay-3">
+                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-label">Technologies Mastered</div>
+            </div>
+            <div class="stat-item reveal-scale stagger-delay-4">
+                <div class="stat-number" data-target="80">0</div>
+                <div class="stat-label">Satisfied Clients</div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="section" id="about">
+            <div class="section-title reveal">
+                <h2>About Me</h2>
+                <p>Get to know more about my background and expertise</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text reveal-left">
+                    <h3>I'm a Passionate Developer</h3>
+                    <p>
+                        With over 5 years of experience in full-stack development, I have honed my skills in building robust web applications and delivering high-quality solutions. My expertise spans across various technologies including JavaScript, Node.js, React, and more.
+                    </p>
+                    <p>
+                        I am dedicated to continuous learning and staying updated with the latest industry trends. My goal is to create impactful digital experiences that not only meet but exceed client expectations.
+                    </p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">Let's Talk</a>
+                </div>
+                <div class="about-info reveal-right">
+                    <div class="info-item">
+                        <div class="info-label">Name:</div>
+                        <div class="info-value">Vincent Bernabe Romeo</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Email:</div>
+                        <div class="info-value">daisukiedev@gmail.com</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phone:</div>
+                        <div class="info-value">+63 9945935023</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Location:</div>
+                        <div class="info-value">Cebu City, Philippines</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Experience:</div>
+                        <div class="info-value">5 Years of Experience</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Availability:</div>
+                        <div class="info-value">Open to work</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section" id="skills">
+            <div class="section-title reveal">
+                <h2>My Skills</h2>
+                <p>Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card reveal-scale stagger-delay-1">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Frontend Development</h3>
+                    <p style="color: #ccc; margin-top: 10px;">HTML, CSS, JavaScript, React, Vue.js</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal-scale stagger-delay-2">
+                    <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Backend Development</h3>
+                    <p style="color: #ccc; margin-top: 10px;">Node.js, Python, PHP, Database Management</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal-scale stagger-delay-3">
+                    <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p style="color: #ccc; margin-top: 10px;">Figma, Adobe XD, Responsive Design</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal-scale stagger-delay-4">
+                    <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile Development</h3>
+                    <p style="color: #ccc; margin-top: 10px;">React Native, Flutter, Progressive Web Apps</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="section" id="services">
+            <div class="section-title reveal">
+                <h2>My Services</h2>
+                <p>What I can do for you</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal stagger-delay-1">
+                    <div class="service-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and modern websites using the latest technologies and best practices.</p>
+                </div>
+                <div class="service-card reveal stagger-delay-2">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile Apps</h3>
+                    <p>Creating cross-platform mobile applications with seamless user experiences and native performance.</p>
+                </div>
+                <div class="service-card reveal stagger-delay-3">
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Designing intuitive and beautiful interfaces that provide exceptional user experiences.</p>
+                </div>
+                <div class="service-card reveal stagger-delay-4">
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Performance Optimization</h3>
+                    <p>Improving website speed and performance to enhance user satisfaction and SEO rankings.</p>
+                </div>
+                <div class="service-card reveal stagger-delay-5">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Providing ongoing maintenance and technical support to keep your projects running smoothly.</p>
+                </div>
+                <div class="service-card reveal stagger-delay-6">
+                    <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Consulting</h3>
+                    <p>Offering expert advice on technology choices, architecture, and development strategies.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div class="section" id="portfolio">
+            <div class="section-title reveal">
+                <h2>My Portfolio</h2>
+                <p>Recent projects I've worked on, View my Github to see my projects</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Portfolio items will be loaded dynamically from JSON -->
+            </div>
+            <div class="portfolio-cta reveal">
+                <a href="https://github.com/DaisuKiee" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i>
+                    See More on GitHub
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section" id="contact">
+            <div class="section-title reveal">
+                <h2>Get In Touch</h2>
+                <p>Let's work together on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info reveal-left">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>daisukiedev@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+63 9935935023</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Cebu City, Philippines</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-globe"></i></div>
+                        <div class="contact-details">
+                            <h4>Website</h4>
+                            <p>https://daisukie.is-a.dev/</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form reveal-right" id="contactForm">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" id="subject" placeholder="Enter subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%;">Send Message</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>built with ❤️ by Daisukie Dev</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
